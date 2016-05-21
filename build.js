@@ -20,9 +20,18 @@ aimer('https://rawgit.com/egoist/1e3b1151309235b8233ae221fa650e6c/raw/a2a70c5229
 					const shade = camelcase($(this).find('.shade').text())
 					const color = $(this).find('.hex').text()
 					res[colorName][shade] = color
+					if (shade === '500') {
+						res[colorName].hex = color
+					}
 				}
 			})
 		})
+		for (const key in res.extra) {
+			res[key] = {
+				hex: res.extra[key]
+			}
+		}
+		delete res.extra
 		fs.writeFileSync('./color.json', JSON.stringify(res), 'utf8')
 		console.log('done...')
 	})
