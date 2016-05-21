@@ -1,4 +1,4 @@
-# color-lib
+# color-lib [![NPM version](https://img.shields.io/npm/v/color-lib.svg)](https://npmjs.com/package/color-lib) [![NPM downloads](https://img.shields.io/npm/dm/color-lib.svg)](https://npmjs.com/package/color-lib)
 
 A color library which contains all colors in [material design](https://www.google.com/design/spec/style/color.html).
 
